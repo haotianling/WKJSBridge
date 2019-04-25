@@ -1,16 +1,16 @@
 # 简介
-### 两行代码让WebView拥有Hybrid能力，兼容WKWebView和UIWebView
-### WKWebView通信：addScritMessageHandler
-### UIWebView通信：JavaScriptCore
-### 框架详细介绍戳这里：https://juejin.im/post/5c07d95ee51d451d930b04c7
+ 两行代码让WebView拥有Hybrid能力，兼容WKWebView和UIWebView
+ WKWebView通信：addScritMessageHandler
+ UIWebView通信：JavaScriptCore
+ 框架详细介绍戳这里：https://juejin.im/post/5c07d95ee51d451d930b04c7
 
 
 # 功能
-### 1.兼容WKWebView和UIWebView。
-### 2.插件化JS-Native业务逻辑。
-### 3.基于__attribute函数进行插件注册。
-### 4.针对WKWebView进行了Cookie丢失处理。
-### 5.支持Native-JS的统一回调处理。
+ 1.兼容WKWebView和UIWebView。
+ 2.插件化JS-Native业务逻辑。
+ 3.基于__attribute函数进行插件注册。
+ 4.针对WKWebView进行了Cookie丢失处理。
+ 5.支持Native-JS的统一回调处理。
 
 
 # 使用说明：
@@ -31,9 +31,9 @@ _bridge = [SHRMWebViewEngine bindBridgeWithWebView:webView];
 
 ## 二、自定义业务插件（当有了一个新的需求或者JS-Native的交互需要将其定义为插件，例如JS端想获取当前定位，或者JS端想获取设备信息等等）
 
-### 1.创建插件类，继承自SHRMBasePlugin。
-### 2.插件类里面添加@SHRMRegisterWebPlugin宏，暂时用于插件是否需要提前初始化，加快第一次调用速度。也可以扩充一些其他功能。
-### 3.插件里构建业务逻辑，并把结果回传给JS侧。
+ 1.创建插件类，继承自SHRMBasePlugin。
+ 2.插件类里面添加@SHRMRegisterWebPlugin宏，暂时用于插件是否需要提前初始化，加快第一次调用速度。也可以扩充一些其他功能。
+ 3.插件里构建业务逻辑，并把结果回传给JS侧。
 
 ```
 #import "SHRMBasePlugin.h"
@@ -57,5 +57,11 @@ _bridge = [SHRMWebViewEngine bindBridgeWithWebView:webView];
 @end
 ```
 
-# JS调用详见index.html文件
+# JS调用
+
+详见index.html文件
+
+# 7. 开源许可证
+
+WKJSBridge is available under the Apache License. See the LICENSE file for more info.
 
